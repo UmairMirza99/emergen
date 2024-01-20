@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "809331144142",
+    "project_id": "emergency-2360b",
+    "storage_bucket": "emergency-2360b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:809331144142:android:dadb2c01326d15c571679f",
+        "android_client_info": {
+          "package_name": "com.example.emrergency"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbWX29QThWWjDj_czUDsFha-B4_Vk_vos"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
