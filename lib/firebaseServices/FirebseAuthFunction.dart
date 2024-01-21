@@ -1,5 +1,5 @@
 import 'package:emrergency/Model/RegistrationModel.dart';
-import 'package:emrergency/screens/HomeScreens/SignalorScreen/HomeScreen.dart';
+import 'package:emrergency/screens/Authentication/BarCodeSignatureScreen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -57,9 +57,11 @@ class FirebaseAuthentication{
     )
     .then((value) {
       Fluttertoast.showToast(msg: 'Register successfully.');
-      Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context)=> const HomeScreen()), (route) => false).then((value){
+      Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context)=>  BarCodeSignatureScreen()), (route) => false).then((value){
         FirebaseAuth.instance.signOut();
       });
     });
   }
+
+
 }

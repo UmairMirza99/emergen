@@ -46,5 +46,10 @@
   // final Result Screen
   static String finalResulScreenTop='Zagalo agé de 27 ans ,de couleur noir et ayant approximativement 1,97m_, je le signale a cause par ce qu’il a tendance a me porter main';
   static String bottomText='Ce signalement vous codtera 500\nFcfa\n En cas d’urgence cela vous\nvaudra 2500F cfa';
+  // Plain Screen
+
+  static String plainTopText='Rédige ta plaints et nous vous\nreconttacterant';
+  static String plainCenterText='Ajoutez preuves';
+  static String plainBottomText='Les frais d\'evois sont éievés a 5000fcfa';
 
 }

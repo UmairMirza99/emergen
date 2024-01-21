@@ -37,11 +37,12 @@ class _HomeScreenState extends State<HomeScreen> {
             },
             child: Container(height: 120,width: 120,
               decoration: const BoxDecoration(color: AppColors.darkRedColor,shape: BoxShape.circle),
+              child: Center(child: Text(AppStrings.report),),
             ),
           ),
           ),
             const SizedBox(height: 15,),
-            Text(AppStrings.buttonBottomText,style: TextStyle(color: AppColors.darkRedColor,fontSize: 15,fontWeight: FontWeight.bold),)
+            Text(AppStrings.buttonBottomText,style: const TextStyle(color: AppColors.darkRedColor,fontSize: 15,fontWeight: FontWeight.bold),)
         ],),
       ),
     );

@@ -1,13 +1,10 @@
 import 'dart:typed_data';
 import 'dart:io';
-
-
 import 'package:emrergency/Model/RegistrationModel.dart';
 import 'package:emrergency/consts/AppColors.dart';
 import 'package:emrergency/consts/AppStrings.dart';
 import 'package:emrergency/consts/GlobalFunction.dart';
 import 'package:emrergency/firebaseServices/FirebseAuthFunction.dart';
-import 'package:emrergency/screens/Authentication/BarCodeSignatureScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:path_provider/path_provider.dart';
@@ -55,8 +52,8 @@ bool loading=false;
                         fontWeight: FontWeight.bold,fontSize: 20),),
                 ),
                 const SizedBox(height: 20,),
-                textBox(text: AppStrings.password, label: AppStrings.password, icon: Icons.lock, textVisibility: false, type: TextInputType.text),
-                textBox(text: AppStrings.confirmPassword, label: AppStrings.confirmPassword, icon: Icons.lock, textVisibility: false, type: TextInputType.text),
+                textBox(text: AppStrings.password, label: AppStrings.password, icon: Icons.lock, textVisibility: false, type: TextInputType.text, controller: passwordController),
+                textBox(text: AppStrings.confirmPassword, label: AppStrings.confirmPassword, icon: Icons.lock, textVisibility: false, type: TextInputType.text, controller: confirmPasswordController),
                 const SizedBox(height: 5,),
                 Container(
                   margin: const EdgeInsets.only(left:10),
@@ -180,10 +177,12 @@ print(filePath);
     required IconData icon,
     required bool textVisibility,
     required TextInputType type,
+    required TextEditingController controller
   }) {
     return Container(
       margin: const EdgeInsets.all(5),
       child: TextFormField(
+        controller: controller,
         autofocus: false,
         keyboardType: type,
         validator: (value) {

@@ -1,8 +1,10 @@
 import 'package:emrergency/DashboardScreen.dart';
+import 'package:emrergency/consts/consts.dart';
 import 'package:emrergency/screens/Authentication/LoginScreen.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'screens/HomeScreens/SignalorScreen/HomeScreen.dart';
+
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -20,8 +22,11 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: LoginScreen(),
+    return  MaterialApp(
+      home:
+      firebaseAuth.currentUser!=null?
+          const DashboardScreens():
+      const LoginScreen(),
     );
   }
 }
